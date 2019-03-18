@@ -23,7 +23,6 @@ Linked_List *hash_table(string path) {
 			index = hash_function(key, 10);
 			arr[index].add(str);
 		}
-		arr[7].search("A");
 		return arr;
 	}
 }
