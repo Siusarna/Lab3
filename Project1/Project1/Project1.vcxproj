@@ -115,13 +115,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Hash-table.cpp" />
     <ClCompile Include="hash_function.cpp" />
     <ClCompile Include="input.cpp" />
+    <ClCompile Include="linked_list.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="parce_word_value.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hash_function.h" />
+    <ClInclude Include="Hash_table.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="Linked_list.h" />
+    <ClInclude Include="parce_word_value.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

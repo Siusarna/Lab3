@@ -4,12 +4,10 @@
 using namespace std;
 
 int hash_function(string word,int count_ele) {
-	int ascii;
-	string result="";
-	for (int i = 0; i < word.length(); i++) {
+	int ascii=0;
+	for (unsigned int i = 0; i < word.length(); i++) {
 		char x = word.at(i);
-		ascii = (int)x;
-		result += to_string(ascii);
+		ascii += (int)x;
 	}
-	return (stoi(result) % count_ele);
+	return ascii%count_ele;
 }
