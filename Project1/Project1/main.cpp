@@ -11,5 +11,7 @@ void main() {
 	input(line);
 	Linked_List *arr = new Linked_List[10];
 	arr = hash_table("test.txt");
+	int key = hash_function(line,10);
+	arr[key].search(line);
 	system("pause");
 }

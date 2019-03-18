@@ -14,7 +14,10 @@ void Linked_List::add(string value) {
 void Linked_List::search(string word) {
 	node *elem = tail;
 	while (elem) {
-		cout << elem->data << endl;
+		if (parce(elem->data) == word) {
+			cout << elem->data << endl;
+			return;
+		}
 		elem = elem->next;
 	}
 }
