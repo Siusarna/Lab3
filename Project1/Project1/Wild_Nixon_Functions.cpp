@@ -20,9 +20,11 @@ void work_with_string(string &str, Linked_List *arr, int n) {
 void upper_case(string &str) {
 	char help;
 	for (int i = 0; i < str.size(); i++) {
-		help = str[i];
-		help = 65 + (help - 97);
-		cout << help;
+		if ((str[i] > 'a') && (str[i] < 'z')) {
+			help = str[i];
+			help = 65 + (help - 97);
+			cout << help;
+		}
 	}
 	cout << endl;
 }
