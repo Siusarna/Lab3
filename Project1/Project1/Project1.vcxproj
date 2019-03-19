@@ -121,6 +121,7 @@
     <ClCompile Include="linked_list.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="parce_word_value.cpp" />
+    <ClCompile Include="Wild_Nixon_Functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hash_function.h" />
@@ -128,6 +129,7 @@
     <ClInclude Include="input.h" />
     <ClInclude Include="Linked_list.h" />
     <ClInclude Include="parce_word_value.h" />
+    <ClInclude Include="Wild_Nixon_Functions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
