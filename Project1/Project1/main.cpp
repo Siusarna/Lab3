@@ -13,8 +13,10 @@ void main() {
 	Linked_List *arr = new Linked_List[n];
 	arr = hash_table("dict_processed.txt",n);
 	string line;
-	input(line);
-	work_with_string(line, arr, n);
+	do {
+		input(line);
+		work_with_string(line, arr, n);
+	} while (ask_for_repeat());
 
 
 

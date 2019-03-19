@@ -29,3 +29,10 @@ void upper_case(string &str) {
 	cout << endl;
 }
 
+bool ask_for_repeat() {
+	char what;
+	cout << "Do You want to repeat the input?(Y/N) ?\b";
+	cin >> what;
+	if ((what == 'Y') || (what == 'y')) return true;
+	else return false;
+}
