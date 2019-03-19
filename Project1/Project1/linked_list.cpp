@@ -21,6 +21,7 @@ void Linked_List::search(string word) {
 		}
 		elem = elem->next;
 	}
+	cout << "I cant find this word" << endl;
 }
 
 int Linked_List::size() {
