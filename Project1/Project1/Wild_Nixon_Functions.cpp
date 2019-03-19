@@ -25,9 +25,7 @@ void upper_case(string &str) {
 		if ((str[i] >= 'a') && (str[i] <= 'z')) {
 			help = str[i];
 			help = 65 + (help - 97);
-			cout << help;
 			str[i] = help;
-			cout << str[i];
 		}
 	}
 }
@@ -36,6 +34,9 @@ bool ask_for_repeat() {
 	char what;
 	cout << "Do You want to repeat the input?(Y/N) ?\b";
 	cin >> what;
-	if ((what == 'Y') || (what == 'y')) return true;
+	if ((what == 'Y') || (what == 'y')) {
+		cin.ignore();
+		return true;
+	}
 	else return false;
 }

@@ -9,7 +9,7 @@ Linked_List *resize(Linked_List *arr, int &n) {
 	for (int i = 0; i < n; i++) {
 		arr1[i] = arr[i];
 	}
-	n *= 10;
+	n *= 2;
 	return arr1;
 }
 

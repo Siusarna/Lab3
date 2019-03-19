@@ -12,17 +12,13 @@ void main() {
 	int n = 10;
 	Linked_List *arr = new Linked_List[n];
 	arr = hash_table("dict_processed.txt",n);
-	string line;
 	do {
-		input(line);
+		string line;
+ 		input(line);
 		work_with_string(line, arr, n);
 	} while (ask_for_repeat());
 
 
-
-	/*int key = hash_function(line,n);
-	arr[key].search(line);
-	*/
 	delete[] arr;
 	system("pause");
 }
