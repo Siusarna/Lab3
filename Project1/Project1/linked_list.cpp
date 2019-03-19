@@ -9,6 +9,7 @@ void Linked_List::add(string value) {
 	tmp->data = value;
 	tmp->next = tail;
 	tail = tmp;
+	count++;
 		
 }
 void Linked_List::search(string word) {
@@ -20,4 +21,8 @@ void Linked_List::search(string word) {
 		}
 		elem = elem->next;
 	}
+}
+
+int Linked_List::size() {
+	return count;
 }

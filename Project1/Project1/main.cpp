@@ -9,9 +9,11 @@ void main() {
 	cout << "Hello" << endl;
 	string line;
 	input(line);
-	Linked_List *arr = new Linked_List[10];
-	arr = hash_table("test.txt");
-	int key = hash_function(line,10);
+	int n = 10;
+	Linked_List *arr = new Linked_List[n];
+	arr = hash_table("dict_processed.txt",n);
+	int key = hash_function(line,n);
 	arr[key].search(line);
+	delete[] arr;
 	system("pause");
 }

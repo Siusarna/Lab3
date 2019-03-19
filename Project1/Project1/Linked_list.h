@@ -10,11 +10,12 @@ struct node {
 class Linked_List {
 private:
 	node *tail;
+	int count=0;
 public:
 	Linked_List() {
 		tail = NULL;
 	}
 	void add(string value);
 	void search(string word);
-
+	int size();
 };

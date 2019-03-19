@@ -4,7 +4,17 @@
 #include "parce_word_value.h"
 #include <fstream>
 
-Linked_List *hash_table(string path) {
+Linked_List *resize(Linked_List *arr, int &n) {
+	Linked_List *arr1 = new Linked_List[n * 10];
+	for (int i = 0; i < n; i++) {
+		arr1[i] = arr[i];
+	}
+	n *= 10;
+	return arr1;
+}
+
+
+Linked_List *hash_table(string path,int &n) {
 	ifstream fin;
 	fin.open(path);
 	if (!fin.is_open()) {
@@ -16,12 +26,18 @@ Linked_List *hash_table(string path) {
 		string str;
 		string key;
 		int index;
-		Linked_List *arr = new Linked_List[10];
+		int count = 0;
+		Linked_List *arr = new Linked_List[n];
 		while (!fin.eof()) {
 			getline(fin, str);
 			key = parce(str);
-			index = hash_function(key, 10);
+			index = hash_function(key, n);
+			if (arr[index].size() == 0) count++;
 			arr[index].add(str);
+			if (count >= (n*0.8)) {
+				arr = resize(arr, n);
+			}
+
 		}
 		
 		return arr;
