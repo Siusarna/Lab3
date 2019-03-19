@@ -19,10 +19,11 @@ Linked_List *hash_table(string path,int &n) {
 	fin.open(path);
 	if (!fin.is_open()) {
 		cout << "File isnt open" << endl;
-		exit(1);
+		system("pause");
 	}
 	else {
 		cout << "File open" << endl;
+		cout << "Create hash-table" << endl;
 		string str;
 		string key;
 		int index;

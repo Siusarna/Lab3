@@ -7,11 +7,11 @@ using namespace std;
 
 void main() {
 	cout << "Hello" << endl;
-	string line;
-	input(line);
 	int n = 10;
 	Linked_List *arr = new Linked_List[n];
 	arr = hash_table("dict_processed.txt",n);
+	string line;
+	input(line);
 	int key = hash_function(line,n);
 	arr[key].search(line);
 	delete[] arr;
