@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Wild_Nixon_Functions.h"
 #include "hash_function.h"
 #include "Linked_list.h"
 using namespace std;
@@ -23,10 +24,8 @@ void upper_case(string &str) {
 		if ((str[i] > 'a') && (str[i] < 'z')) {
 			help = str[i];
 			help = 65 + (help - 97);
-			cout << help;
 		}
 	}
-	cout << endl;
 }
 
 bool ask_for_repeat() {
