@@ -18,4 +18,5 @@ public:
 	void add(string value);
 	void search(string word);
 	int size();
+	string head();
 };

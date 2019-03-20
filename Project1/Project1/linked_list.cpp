@@ -27,3 +27,7 @@ void Linked_List::search(string word) {
 int Linked_List::size() {
 	return count;
 }
+string Linked_List::head() {
+	node *elem = tail;
+	return elem->data;
+}

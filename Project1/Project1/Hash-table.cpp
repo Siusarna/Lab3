@@ -5,11 +5,21 @@
 #include <fstream>
 
 Linked_List *resize(Linked_List *arr, int &n) {
-	Linked_List *arr1 = new Linked_List[n * 10];
-	for (int i = 0; i < n; i++) {
-		arr1[i] = arr[i];
-	}
+	int arr_size = n;
 	n *= 2;
+	Linked_List *arr1 = new Linked_List[n];
+	string temp;
+	string key;
+	int index;
+	for (int i = 0; i < arr_size; i++) {
+		if (arr[i].size() > 0) {
+			temp = arr[i].head();
+			key = parce(temp);
+			index = hash_function(key, n);
+			arr1[index] = arr[i];
+		}
+
+	}
 	return arr1;
 }
 
