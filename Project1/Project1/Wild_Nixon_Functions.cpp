@@ -3,18 +3,17 @@
 #include "Wild_Nixon_Functions.h"
 #include "hash_function.h"
 #include "Linked_list.h"
+#include "Hash_table.h"
 using namespace std;
 
-void work_with_string(string &str, Linked_List *arr, int n) {
+void work_with_string(string &str,Hash_table &task) {
 	string cword;
-	int hash;
 	str += " ";
 	while (!str.empty()) {
 		cword = str.substr(0, (str.find_first_of(" ")));
 		upper_case(cword);
-		hash = hash_function(cword, n);
 		cout << cword << endl;
-		(arr[hash]).search(cword);
+		task.get(cword);
 		str = str.substr(str.find_first_of(" ") + 1);
 	}
 }
@@ -40,3 +39,4 @@ bool ask_for_repeat() {
 	}
 	else return false;
 }
+

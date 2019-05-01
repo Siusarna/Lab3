@@ -3,4 +3,4 @@
 #include <iostream>
 using namespace std;
 
-int hash_function(string word, int count_ele);
+int hash_function(string word);

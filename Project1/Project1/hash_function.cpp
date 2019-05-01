@@ -3,11 +3,12 @@
 #include "hash_function.h"
 using namespace std;
 
-int hash_function(string word,int count_ele) {
+int hash_function(string word) {
 	int ascii=0;
-	for (unsigned int i = 0; i < word.length(); i++) {
+	int size = word.length();
+	for (unsigned int i = 0; i < size; i++) {
 		char x = word.at(i);
-		ascii += (int)x;
+		ascii += word[i] * (31 ^ (size - i));
 	}
-	return ascii%count_ele;
+	return ascii;
 }

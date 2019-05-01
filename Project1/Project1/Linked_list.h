@@ -9,9 +9,9 @@ struct node {
 
 class Linked_List {
 private:
-	node *tail;
 	int count=0;
 public:
+	node *tail;
 	Linked_List() {
 		tail = NULL;
 	}
